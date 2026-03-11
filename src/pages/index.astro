@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/home/Hero.astro";
+import Contact from "../components/home/Contact.astro";
+import Services from "../components/home/Services.astro";
+import Careers from "../components/home/Careers.astro";
+import Testimonials from "../components/home/Testimonials.astro";
+import Footer from "../components/Footer.astro";
+import { Icon } from "astro-icon/components";
+
+import smilingCaregiver from "../assets/smiling-caregiver-2.png";
+---
+
+<Layout title="The Help Care - Compassionate Home Care Services in San Fernando Valley">
+  <Header />
+  <main>
+    <Hero />
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-gray-50 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          
+          <div class="relative order-2 lg:order-1">
+            <div class="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-teal-lime rounded-full opacity-20 blur-3xl"></div>
+            <div class="absolute -right-10 bottom-0 w-72 h-72 bg-gradient-purple-blue rounded-full opacity-15 blur-3xl"></div>
+            
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-purple-blue-angled rounded-3xl transform rotate-3 opacity-10"></div>
+                <div class="relative bg-white rounded-3xl p-6 shadow-xl">
+                  <img 
+                    src={smilingCaregiver.src}
+                    alt="Smiling Caregiver" 
+                    class="w-full h-full object-cover rounded-3xl"
+                  />
+                </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2">
+            <h2 class="text-3xl sm:text-4xl font-medium font-serif mb-6 leading-tight">
+              Why families choose The Help Care for in-home care.
+            </h2>
+            
+            <div class="space-y-6 text-gray-600 leading-relaxed">
+              <p>
+                At The Help Care, we're dedicated to helping seniors live safely and
+                comfortably at home with care that's both personalized and deeply
+                human. We don't just show up. We get to know your family, listen to
+                what matters, and create a plan that fits your life.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <Testimonials />
+
+    <Services />
+
+    <Careers />
+
+    <Contact />
+
+  </main>
+  <Footer />
+</Layout>

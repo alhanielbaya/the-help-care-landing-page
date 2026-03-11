@@ -1,0 +1,103 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const services = [
+  {
+    icon: 'ph:hands-clapping',
+    title: 'Personal Care',
+    description: 'Our caregivers provide gentle assistance with daily activities like bathing, dressing, and grooming. We help seniors maintain their dignity and independence while ensuring their safety and comfort at home.'
+  },
+  {
+    icon: 'ph:wheelchair',
+    title: 'Disability Care',
+    description: 'Specialized support for individuals with disabilities, focusing on personalized care plans that promote independence. Our trained caregivers adapt to unique needs, providing respectful assistance that enhances quality of life.'
+  },
+  {
+    icon: 'ph:pill',
+    title: 'Medication Reminders',
+    description: 'Never miss a dose with our reliable medication reminder service. We help seniors stay on track with their prescriptions, ensuring timely administration and peace of mind for families.'
+  },
+  {
+    icon: 'ph:drop',
+    title: 'Hygiene & Incontinence Care',
+    description: 'Compassionate assistance with bathing, grooming, and incontinence management. Our caregivers handle these sensitive needs with professionalism and respect, preserving your loved one\'s dignity.'
+  },
+  {
+    icon: 'ph:bowl-food',
+    title: 'Meal Preparation',
+    description: 'Nutritious, home-cooked meals tailored to dietary needs and preferences. We handle everything from grocery shopping to cooking, ensuring seniors enjoy healthy, delicious food every day.'
+  },
+  {
+    icon: 'ph:car',
+    title: 'Transportation & Errands',
+    description: 'Safe and reliable transportation for medical appointments, social outings, and daily errands. Our caregivers provide door-to-door service, ensuring seniors stay connected to their community.'
+  },
+  {
+    icon: 'ph:house',
+    title: 'Live-in Care',
+    description: 'Round-the-clock companionship and support for seniors who need continuous care. Our live-in caregivers become part of the family, providing consistent, personalized attention day and night.'
+  },
+  {
+    icon: 'ph:broom',
+    title: 'Light Housekeeping',
+    description: 'A clean, organized home is a safe home. We handle light cleaning, laundry, and tidying to create a comfortable living environment that reduces fall risks and promotes wellbeing.'
+  },
+  {
+    icon: 'ph:heart',
+    title: 'Respite Care',
+    description: 'Family caregivers need breaks too. Our respite care gives you time to recharge while ensuring your loved one receives professional, compassionate care in your absence.'
+  },
+  {
+    icon: 'ph:first-aid',
+    title: 'Specialty Care',
+    description: 'Expert care for specific conditions including dementia, Parkinson\'s, stroke recovery, and more. Our specialized caregivers have the training and experience to handle complex medical needs.'
+  },
+  {
+    icon: 'ph:butterfly',
+    title: 'Hospice Care',
+    description: 'Comfort-focused end-of-life care that prioritizes dignity and quality of life. Our compassionate caregivers provide physical, emotional, and spiritual support for both patients and families.'
+  },
+  {
+    icon: 'ph:phone-call',
+    title: '24/7 On-Call Emergency Services',
+    description: 'Help is always just a phone call away. Our emergency hotline connects you with care coordinators who can dispatch assistance whenever you need it, day or night.'
+  }
+];
+---
+
+<section id="services" class="py-16 md:py-24 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        The Care You Need for the Life You Want
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        From making a meal to helping a loved one with memory loss, our services help older adults age comfortably and confidently at home.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {services.map((service, index) => (
+        <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group">
+          <div class="flex flex-col items-center text-center">
+            <div class={`w-16 h-16 rounded-2xl flex items-center justify-center mb-4 transition-colors duration-300 ${index % 2 === 0 ? 'bg-gradient-teal-lime group-hover:opacity-90' : 'bg-gradient-purple-blue group-hover:opacity-90'}`}>
+              <Icon name={service.icon} size={32} class="text-white" />
+            </div>
+            <h3 class="text-lg font-bold mb-3 text-gray-900">{service.title}</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">{service.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a
+        href="#contact"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-purple-blue text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
+      >
+        Get Started Today
+        <Icon name="ph:arrow-right" size={20} />
+      </a>
+    </div>
+  </div>
+</section>

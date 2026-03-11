@@ -1,0 +1,50 @@
+---
+import { Icon } from 'astro-icon/components';
+import Logo from '../assets/logo-with-text.png';
+
+const navItems = [
+  { label: "About Us", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Careers", href: "#careers" },
+  { label: "Contact Us", href: "#contact" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex items-center gap-2">
+        <img src={Logo.src} alt="The Help Care Logo" class="h-20 w-auto mx-2" />
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class="text-gray-600 hover:text-secondary-purple font-medium transition-colors duration-200"
+          >
+            {item.label}
+          </a>
+        ))}
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a
+          href="tel:+18005551234"
+          class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-purple-blue text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"
+        >
+          <Icon name="ph:phone" size={18} />
+          Call Now
+        </a>
+
+        <button
+          type="button"
+          class="md:hidden p-2 text-gray-600 hover:text-secondary-purple"
+          aria-label="Toggle menu"
+        >
+          <Icon name="ph:list" size={24} />
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

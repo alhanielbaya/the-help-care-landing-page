@@ -1,0 +1,52 @@
+---
+import { Icon } from 'astro-icon/components';
+import heroImage from '../../assets/smiling-caregiver.png';
+---
+
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-purple-blue-angled opacity-10"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="text-center md:text-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <span class="text-dark">Compassionate</span>
+          <br />
+          <span class="text-gradient-purple-blue">Care for Your</span>
+          <br />
+          <span class="text-gradient-teal-lime">Loved Ones</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+          A family-owned Home Care company that helps families thrive. Your peace of mind is our priority.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-purple-blue text-white font-semibold rounded-full hover:opacity-90 transition-opacity duration-200"
+          >
+            Get a Free Consultation
+            <Icon name="ph:arrow-right" size={20} />
+          </a>
+          <a
+            href="tel:+18185551234"
+            class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-secondary-purple text-secondary-purple font-semibold rounded-full hover:bg-secondary-purple hover:text-white transition-colors duration-200"
+          >
+            <Icon name="ph:phone" size={20} />
+            (818) 555-1234
+          </a>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-teal-lime rounded-full opacity-20 blur-2xl"></div>
+        <div class="relative rounded-full overflow-hidden aspect-square max-w-md mx-auto">
+          <img
+            src={heroImage.src}
+            alt="Compassionate caregiver with senior"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon/components';
+import logoWithText from '../assets/logo-with-text.png';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-dark text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <img src={logoWithText.src} alt="The Help Care Logo" class="h-32 w-auto object-contain rounded-2xl bg-gray-100" />
+        <p class="mt-4 text-gray-400">
+          Compassionate home care services for San Fernando Valley families.
+        </p>
+      </div>
+
+      <div>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+          <li><a href="#careers" class="hover:text-white transition-colors">Careers</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-3 text-gray-400">
+          <li class="flex items-center gap-2">
+            <Icon name="ph:phone" size={18} class="text-primary-teal" />
+            <a href="tel:+18185551234" class="hover:text-white transition-colors">(818) 555-1234</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <Icon name="ph:envelope-simple" size={18} class="text-primary-teal" />
+            <a href="mailto:care@thehelpcare.com" class="hover:text-white transition-colors">care@thehelpcare.com</a>
+          </li>
+          <li class="flex items-start gap-2">
+            <Icon name="ph:map-pin" size={18} class="text-primary-teal flex-shrink-0 mt-0.5" />
+            <span>15755 Saticoy St.<br />Los Angeles County, CA</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+      <p class="flex items-center justify-center gap-2">
+        &copy; {currentYear} The Help Care. Made with <Icon name="ph:heart" size={16} class="text-primary-lime" /> All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

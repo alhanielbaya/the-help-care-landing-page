@@ -1,0 +1,59 @@
+---
+import TestimonialsCarousel from "../react/TestimonialsCarousel.tsx";
+
+const testimonials = [
+  {
+    name: "Sarah M.",
+    location: "Granada Hills",
+    quote: "The Help Care has been a blessing for our family. The caregiver they matched us with is so kind and patient with my mother. We finally have peace of mind knowing she's in good hands.",
+    rating: 5
+  },
+  {
+    name: "Robert K.",
+    location: "Sherman Oaks",
+    quote: "After my surgery, I needed help with daily activities. The team at The Help Care provided exceptional support that helped me recover faster. They truly care about their clients.",
+    rating: 5
+  },
+  {
+    name: "Jennifer L.",
+    location: "Northridge",
+    quote: "Finding reliable care for my father with dementia was challenging until we found The Help Care. Their specialized memory care services have made such a difference in his quality of life.",
+    rating: 5
+  },
+  {
+    name: "Michael T.",
+    location: "Burbank",
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The Help Care's respite care services have been a lifesaver for me and my family. We can take a break knowing our loved one is well cared for.",
+    rating: 5
+  },
+  {
+    name: "Lisa P.",
+    location: "Studio City",
+    quote: "As a busy professional, I needed help caring for my aging parents. The Help Care's respite services give me the break I need while ensuring my parents receive excellent care.",
+    rating: 5
+  },
+  {
+    name: "David H.",
+    location: "Encino",
+    quote: "The transportation service has been invaluable. My mother can still attend her book club and doctor appointments thanks to their reliable caregivers. Highly recommend! Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5
+  }
+];
+---
+
+<section class="py-16 md:py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        <span class="bg-gradient-to-r from-[#8e2de2] to-[#4a00e0] bg-clip-text text-transparent">What Families Are Saying</span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Real stories from real families around the San Fernando Valley who trust us with their loved ones.
+      </p>
+    </div>
+
+    <div class="px-8 md:px-12">
+      <TestimonialsCarousel testimonials={testimonials} client:load />
+    </div>
+  </div>
+</section>
