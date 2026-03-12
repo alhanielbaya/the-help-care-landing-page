@@ -7,7 +7,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://alhanielbaya.github.io",
-  base: "/the-help-care-landing-page/",
+  base: "/the-help-care-landing-page",
   output: "static",
   integrations: [icon(), react()],
   vite: {
