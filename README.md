@@ -1,6 +1,6 @@
-# [Live Demo](alhanielbaya.github.io/the-help-care-landing-page/)
+# [Live Demo](https://alhanielbaya.github.io/the-help-care-landing-page/)
 
-[Click Here](alhanielbaya.github.io/the-help-care-landing-page/)
+[Click Here](https://alhanielbaya.github.io/the-help-care-landing-page/)
 
 # Astro Starter Kit: Minimal
 
